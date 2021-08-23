@@ -14,7 +14,9 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -45,7 +47,8 @@
         <div class="container d-flex align-items-center justify-content-between">
 
             <div class="logo">
-                <h1 class="text-light"><a href="{{ route('welcome') }}"><span>Movilidad Urbana y Sostenible - Ibagué</span></a></h1>
+                <h1 class="text-light"><a href="{{ route('welcome') }}"><span>Movilidad Urbana y Sostenible -
+                            Ibagué</span></a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
@@ -56,8 +59,30 @@
                     <li><a class="nav-link scrollto" href="#about">Que hacemos</a></li>
                     <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
                     <li><a class="nav-link scrollto" href="#team">Nuestro Equipo</a></li>
-                    <li><a class="nav-link scrollto" href="{{ route('login') }}">Ingresar</a></li>
-                    <li><a class="nav-link scrollto" href="{{ route('register') }}">Registro</a></li>
+                    @auth
+                        <a href="{{ route('home') }}"
+                            class="text-sm text-gray-700 underline">{{ Auth()->user()->name }}</a>
+
+                        <div>
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Cerrar sesion') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+
+                    @else
+                        <li><a class="nav-link scrollto" href="{{ route('login') }}">Ingresar</a></li>
+
+                        @if (Route::has('register'))
+                            <li><a class="nav-link scrollto" href="{{ route('register') }}">Registro</a></li>
+                        @endif
+                    @endauth
+
+
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
@@ -71,7 +96,7 @@
     @yield('content')
 
 
-     <!-- ======= Footer ======= -->
+    <!-- ======= Footer ======= -->
     <footer id="footer">
         <div class="container">
             <div class="copyright">
@@ -83,13 +108,14 @@
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootstrap-3-one-page-template-free-shuffle/ -->
                 Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Powered by <a href="https://smartandcomputer.co/">BootstrapMade</a>
             </div>
         </div>
     </footer>
     <!-- End Footer -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+            class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

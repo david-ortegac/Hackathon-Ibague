@@ -1,17 +1,5 @@
 @extends('layouts.app')
 
-<style>
-    footer {
-        text-align: center;
-        font-family: sans-serif;
-        color: whitesmoke;
-        width: 100%;
-        bottom: 0;
-        position: fixed;
-    }
-
-</style>
-
 @section('content')
 
     <!-- ======= Hero Section ======= -->
@@ -77,88 +65,8 @@
 
     <main id="app">
 
-        <!-- ======= Info Box Section ======= -->
-        <section id="about" class="info-box py-0">
-            <div class="container-fluid">
-
-                <div class="row">
-
-                    <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-
-                        <div class="content">
-                            <h3>Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong></h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                            </p>
-                        </div>
-
-                        <div class="accordion-list">
-                            <ul>
-                                <li>
-                                    <a data-bs-toggle="collapse" class="collapse"
-                                        data-bs-target="#accordion-list-1"><span>01</span> Non
-                                        consectetur a erat nam at lectus urna duis? <i
-                                            class="bx bx-chevron-down icon-show"></i><i
-                                            class="bx bx-chevron-up icon-close"></i></a>
-                                    <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
-                                        <p>
-                                            Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus
-                                            laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor
-                                            rhoncus dolor purus non.
-                                        </p>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2"
-                                        class="collapsed"><span>02</span>
-                                        Feugiat scelerisque varius morbi enim nunc? <i
-                                            class="bx bx-chevron-down icon-show"></i><i
-                                            class="bx bx-chevron-up icon-close"></i></a>
-                                    <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                                        <p>
-                                            Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
-                                            interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
-                                            scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
-                                            Mauris ultrices eros in
-                                            cursus turpis massa tincidunt dui.
-                                        </p>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3"
-                                        class="collapsed"><span>03</span>
-                                        Dolor sit amet consectetur adipiscing elit? <i
-                                            class="bx bx-chevron-down icon-show"></i><i
-                                            class="bx bx-chevron-up icon-close"></i></a>
-                                    <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                                        <p>
-                                            Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
-                                            Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl
-                                            suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis
-                                            convallis tellus. Urna
-                                            molestie at elementum eu facilisis sed odio morbi quis
-                                        </p>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
-                        style="background-image: url(assets/img/info-box.jpg);">&nbsp;</div>
-                </div>
-
-            </div>
-        </section>
-        <!-- End Info Box Section -->
-
         <!-- ======= Counts Section ======= -->
-        <section class="counts section-bg">
+        <section class="counts section-bg" id="about">
             <div class="container">
 
                 <div class="row no-gutters">
@@ -166,10 +74,9 @@
                     <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
                         <div class="count-box">
                             <i class="bi bi-emoji-smile"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="32500" data-purecounter-duration="100"
                                 class="purecounter"></span>
-                            <p><strong>Happy Clients</strong> consequuntur quae qui deca rode</p>
-                            <a href="#">Find out more &raquo;</a>
+                            <p><strong>Clientes</strong> de toda la plataforma</p>
                         </div>
                     </div>
 
@@ -178,28 +85,25 @@
                             <i class="bi bi-journal-richtext"></i>
                             <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p><strong>Projects</strong> adipisci atque cum quia aut numquam delectus</p>
-                            <a href="#">Find out more &raquo;</a>
+                            <p><strong>Transportadores</strong> de servicio publico</p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
                         <div class="count-box">
                             <i class="bi bi-headset"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="146323" data-purecounter-duration="100"
                                 class="purecounter"></span>
-                            <p><strong>Hours Of Support</strong> aut commodi quaerat. Aliquam ratione</p>
-                            <a href="#">Find out more &raquo;</a>
+                            <p><strong>Atencion al cliente</strong> de toda la plataforma</p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
                         <div class="count-box">
                             <i class="bi bi-people"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="90" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p><strong>Hard Workers</strong> rerum asperiores dolor molestiae doloribu</p>
-                            <a href="#">Find out more &raquo;</a>
+                            <p><strong>Empleados</strong> con labores operativas.</p>
                         </div>
                     </div>
 
@@ -214,47 +118,40 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Our Services</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                        fugiat sit in iste officiis commodi
-                        quidem hic quas.</p>
+                    <h2>Nuestros servicios</h2>
+                    <p>Estos son todos los servicios que tenemos para ofrecerte.</p>
                 </div>
 
                 <div class="row">
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                excepturi</p>
+                            <h4 class="title"><a href="">Transporte publico</a></h4>
+                            <p class="description">Servicio de domingo a domingo desde las 5 am hasta las 10:30 pm</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                dolore</p>
+                            <h4 class="title"><a href="">Transporte personalizado</a></h4>
+                            <p class="description">Vehiculos tipo taxi o particular a disposicion de tus necesidades</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4 class="title"><a href="">Magni Dolores</a></h4>
-                            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                            </p>
+                            <h4 class="title"><a href="">Publicidad para tu negocio</a></h4>
+                            <p class="description">Pauta con nosotros y obten un aumento en tus ganancias y clientes a bajo costo</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-world"></i></div>
-                            <h4 class="title"><a href="">Nemo Enim</a></h4>
-                            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                            </p>
+                            <h4 class="title"><a href="">Trabaja con nosotros</a></h4>
+                            <p class="description">Orientado a personas con vehiculos propios que quieran generar ganancias con estos</p>
                         </div>
                     </div>
 
@@ -269,11 +166,10 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Our Team</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                        fugiat sit in iste officiis commodi
-                        quidem hic quas.</p>
+                    <h2>Nuestro equipo</h2>
+                    <p>Equipo conformado por 1 ingeniero en sistema profesor y 3 estudiantes del programa de ingenieria en sistemas
+                        de la Universidad Cooperativa de Colombia sede Ibagué - Espinal.
+                    </p>
                 </div>
 
                 <div class="row">
@@ -283,8 +179,8 @@
                             <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
                             <div class="member-info">
                                 <div class="member-info-content">
-                                    <h4>Walter White</h4>
-                                    <span>Chief Executive Officer</span>
+                                    <h4>David Ortega</h4>
+                                    <span>Arquitecto y Desarrollador</span>
                                 </div>
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -301,8 +197,8 @@
                             <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
                             <div class="member-info">
                                 <div class="member-info-content">
-                                    <h4>Sarah Jhonson</h4>
-                                    <span>Product Manager</span>
+                                    <h4>Oscar Augusto Diaz Triana</h4>
+                                    <span>Gerente del Proyecto</span>
                                 </div>
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -319,8 +215,8 @@
                             <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
                             <div class="member-info">
                                 <div class="member-info-content">
-                                    <h4>William Anderson</h4>
-                                    <span>CTO</span>
+                                    <h4>Jaime Andres Castro Ortiz</h4>
+                                    <span>Tester</span>
                                 </div>
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -337,8 +233,8 @@
                             <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
                             <div class="member-info">
                                 <div class="member-info-content">
-                                    <h4>Amanda Jepson</h4>
-                                    <span>Accountant</span>
+                                    <h4>Daniel Felipe Medina Moreno</h4>
+                                    <span>Desarrollador</span>
                                 </div>
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
