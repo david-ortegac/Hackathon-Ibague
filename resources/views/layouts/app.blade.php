@@ -55,17 +55,15 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
-                    <li><a class="nav-link scrollto" href="#about">Que hacemos</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Nuestro Equipo</a></li>
+                    <li><a class="nav-link scrollto active" href="{{ route('welcome') }}">Inicio</a></li>
                     @auth
                         <a href="{{ route('home') }}"
                             class="text-sm text-gray-700 underline">{{ Auth()->user()->name }}</a>
 
                         <div>
-                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                     document.getElementById('logout-form').submit();">
+                            <a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                                             document.getElementById('logout-form').submit();">
                                 {{ __('Cerrar sesion') }}
                             </a>
 
@@ -75,11 +73,17 @@
                         </div>
 
                     @else
-                        <li><a class="nav-link scrollto" href="{{ route('login') }}">Ingresar</a></li>
+                        @if (Route::has('welcome'))
+                            <li><a class="nav-link scrollto" href="#about">Que hacemos</a></li>
+                            <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
+                            <li><a class="nav-link scrollto" href="#team">Nuestro Equipo</a></li>
+                            <li><a class="nav-link scrollto" href="{{ route('login') }}">Ingresar</a></li>
+                        @endif
 
                         @if (Route::has('register'))
                             <li><a class="nav-link scrollto" href="{{ route('register') }}">Registro</a></li>
                         @endif
+                        
                     @endauth
 
 
