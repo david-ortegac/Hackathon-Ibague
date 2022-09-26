@@ -1,6 +1,11 @@
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
+.about{
+margin-bottom: 0px;
+padding-bottom: 0px;
+}
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -56,16 +61,3 @@
   text-decoration: none;
 }
 
-.mapa{
-  background: #fff;
-}
-
-.mapa path{
-  fill: #009961;
-  stroke: #fcec04;
-  stroke-width: 2px;
-}
-
-.mapa :hover{
-  fill: #fcec04;
-}

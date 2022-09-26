@@ -149,3 +149,16 @@
 #footer .credits a:hover {
   color: #009961;
 }
+
+#footer .logos {
+  display: flex;
+  justify-content: center;
+}
+
+#footer .logos .logoucc {
+  max-width:150px;
+}
+
+#footer .logos .logosac {
+  max-width:90px;
+}
