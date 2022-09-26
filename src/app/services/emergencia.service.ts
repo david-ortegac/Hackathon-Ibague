@@ -21,15 +21,18 @@ export class EmergenciaService {
     return this.firestore.collection("emergencia").doc(id).valueChanges();
   }
 
-  createEmergency(emergencia: Emergencia) {
-    return new Promise<Emergencia>((resolve, reject) => {
+  createEmergency(data: Emergencia) {
+    console.log(data)
+    return new Promise<any>((resolve, reject) => {
       this.firestore
-      .collection("emergencia").add(emergencia)
-        .then(res => {
-        console.log(res);
-        }, (error) => {
-          reject(error);
-      })
+        .collection("emergencia")
+        .add(data)
+        .then((response) => {
+          console.log(response)
+        },
+          (error) => {
+            reject(error)
+          })
     })
   }
 

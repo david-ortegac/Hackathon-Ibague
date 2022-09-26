@@ -11,12 +11,14 @@ export class EmergenciesComponent implements OnInit {
 
   emergencias: Emergencia[] = [];
 
-  constructor(private emergenciaService: EmergenciaService) { }
+  constructor(
+    private emergenciaService: EmergenciaService,
+  ) { }
 
   ngOnInit(): void {
     this.emergenciaService.getAllEmergencies().subscribe(res => {
       console.log(res);
-      
+
       this.emergencias = res.map((e) => {
         return {
           id: e.payload.doc.id,
@@ -24,6 +26,12 @@ export class EmergenciesComponent implements OnInit {
         };
       });
     });
+  }
+
+  editEmergency: boolean = false;
+  editar() {
+    this.editEmergency = true;
+    //this.emergenciaService.updateEmergency()
   }
 
 }

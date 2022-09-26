@@ -24,6 +24,11 @@ import { FaqComponent } from './components/faq/faq.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { IotComponent } from './components/iot/iot.component';
 import { LoginComponent } from './components/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+//prime ng
+import { PrimeNGConfig } from 'primeng/api';
+import { DropdownModule } from 'primeng/dropdown';
 
 
 @NgModule({
@@ -41,7 +46,7 @@ import { LoginComponent } from './components/login/login.component';
     ContactComponent,
     IotComponent,
     LoginComponent,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -49,7 +54,9 @@ import { LoginComponent } from './components/login/login.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    ReactiveFormsModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
