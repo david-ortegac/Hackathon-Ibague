@@ -15,7 +15,6 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 //imports firebase config
 import { environment } from 'src/environments/environment';
-import { AssingEmergencyComponent } from './components/assing-emergency/assing-emergency.component';
 import { SearchEmergencyComponent } from './components/search-emergency/search-emergency.component';
 import { EmergenciesComponent } from './components/emergencies/emergencies.component';
 import { AboutComponent } from './components/about/about.component';
@@ -25,11 +24,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { IotComponent } from './components/iot/iot.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
-//prime ng
-import { PrimeNGConfig } from 'primeng/api';
-import { DropdownModule } from 'primeng/dropdown';
-
+import { AssingEmergencyComponent } from './components/assing-emergency/assing-emergency.component';
 
 @NgModule({
   declarations: [
@@ -55,8 +50,7 @@ import { DropdownModule } from 'primeng/dropdown';
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
-    ReactiveFormsModule,
-    DropdownModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 //import modules from firestore
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Emergencia } from '../models/emergencia.model';
+import { Trazabilidad } from '../models/trazabilidad.model';
 
 @Injectable({
   providedIn: 'root'
@@ -41,10 +42,11 @@ export class EmergenciaService {
       .collection("emergencia")
       .doc(id)
       .update({
-        lugar: emergencia.lugar,
+        /* lugar: emergencia.lugar,
         descripcion: emergencia.descripcion,
-        tipoEmergencia: emergencia.tipoEmergencia,
-        estado: emergencia.estado
+        tipoEmergencia: emergencia.tipoEmergencia, */
+        estado: emergencia.estado,
+        trazabilidad: emergencia.trazabilidad,
       });
   }
 

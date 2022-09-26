@@ -15,7 +15,7 @@ const routes: Routes = [
     path: 'emergencies', component: EmergenciesComponent,
   },
   {
-    path: 'emergencies-asigned', component: AssingEmergencyComponent
+    path: 'emergencies-asigned/:id', component: AssingEmergencyComponent
   },
   {
     path: 'iot', component: IotComponent

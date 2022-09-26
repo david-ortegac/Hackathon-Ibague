@@ -1,1 +1,47 @@
-<p>assing-emergency works!</p>
+<app-navbar></app-navbar>
+
+<div class="container">
+  <h1>Asignacion de caso</h1>
+  <form [formGroup]="formEdit">
+    <div class="row">
+      <div class="col-6">
+        <label><b>Seleccione el tipo de emergencia</b></label>
+        <br>
+        <label>{{ emergenciaEdit.tipoEmergencia! }}</label>
+      </div>
+      <div class="col-6">
+        <label><b>Selccione la ubicación</b></label>
+        <br>
+        <label>{{ emergenciaEdit.lugar }}</label>
+      </div>
+    </div>
+    <div class="form-group mt-3">
+        <textarea class="form-control" readonly id="floatingTextarea">{{ emergenciaEdit.descripcion }}</textarea>
+    </div>
+
+    <div class="col-12 mt-3">
+      <label for="">Asignar Usuario</label>
+      <select formControlName="usuarioAsignado" class="form-select" aria-label="Default select example">
+        <option value="Policia">Policia</option>
+        <option value="Bomberos">Bomberos</option>
+        <option value="Cruz roja">Cruz roja</option>
+        <option value="Defensa civil">Defensa civil</option>
+        <option value="Ejercito">Ejercito</option>
+        <option value="Alcaldia">Alcaldia</option>
+      </select>
+    </div>
+    <div class="col-12 mt-3">
+      <textarea class="form-control" formControlName="trazabilidad"></textarea>
+    </div>
+
+    <div class="text-center">
+      <span *ngIf="!formEdit.valid" class="badge text-bg-danger">Debe llenar los datos del formulario para poder enviar</span>
+    </div>
+
+    <div class="text-center my-3">
+      <button [disabled]="!formEdit.valid" class="btn btn-outline-success" type="submit">Actualizar reporte</button>
+    </div>
+  </form>
+</div>
+
+<app-footer></app-footer>
